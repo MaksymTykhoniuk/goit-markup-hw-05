@@ -333,24 +333,23 @@ address {
 .work-list .item {
   position: relative;
 }
-.wl-thumb {
+
+.item-descriprion {
   position: absolute;
   left: 0;
   bottom: 0;
   width: 100%;
   height: 70px;
-  padding: 27px 0;
-  background-color: rgba(47, 48, 58, 0.8);
-}
+  display: flex;
+  justify-content: center;
+  align-items: center;
 
-.thumb-descriprion {
   font-weight: 700;
-  font-size: 14px;
   line-height: 1.14;
-  text-align: center;
   text-transform: uppercase;
 
   color: var(--background-color);
+  background-color: rgba(47, 48, 58, 0.8);
 }
 
 /* команда */
@@ -546,14 +545,14 @@ address {
   display: block;
 }
 
-.galery-card:hover,
-.galery-card:focus {
+.galery-card .link:hover,
+.galery-card .link:focus {
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
     1px 4px 6px rgba(0, 0, 0, 0.16);
 }
 
-.galery-card:hover .overlay,
-.galery-card:focus .overlay {
+.galery-card .link:hover .overlay,
+.galery-card .link:focus .overlay {
   transform: translateY(0);
 }
 .galery .galery-card:nth-child(3n) {
@@ -735,7 +734,7 @@ address {
   background-color: rgba(0, 0, 0, 0.2);
 
   opacity: 1;
-  transition: opacity 250ms var(--time-function);
+  transition: opacity 250ms var(--time-function), visibility 250ms var(--time-function);
 }
 
 .backdrop.is-hidden {
